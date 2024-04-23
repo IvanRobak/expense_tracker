@@ -23,6 +23,13 @@ class _ExpansesState extends State<Expanses> {
         category: Category.leisure),
   ];
 
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => const Text('modal buttom sheet'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +37,11 @@ class _ExpansesState extends State<Expanses> {
         title: const Text('Expense Tracker'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: _openAddExpenseOverlay,
             icon: const Icon(Icons.add),
           ),
         ],
       ),
-      // backgroundColor: Color.fromARGB(3, 178, 41, 41),
       body: Column(
         children: [
           Expanded(
