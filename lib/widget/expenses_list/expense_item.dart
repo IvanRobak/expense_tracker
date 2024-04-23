@@ -28,7 +28,7 @@ class ExpenseItem extends StatelessWidget {
                       width: 10,
                     ),
                     Text(
-                      expense.date.toString(),
+                      expense.formattedDate,
                     )
                   ],
                 )
