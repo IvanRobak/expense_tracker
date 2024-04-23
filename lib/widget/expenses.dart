@@ -26,9 +26,18 @@ class _ExpansesState extends State<Expanses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expense Tracker'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          ),
+        ],
+      ),
+      // backgroundColor: Color.fromARGB(3, 178, 41, 41),
       body: Column(
         children: [
-          const Text('example'),
           Expanded(
             child: ExpensesList(expenses: _registerExpense),
           ),
